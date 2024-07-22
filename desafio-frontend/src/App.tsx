@@ -1,24 +1,11 @@
-import { DataTable } from './pages/app/data-table'
-import { User, columns } from './pages/app/columns'
+import { DataTableDemo } from './pages/app/dataTableDemo'
 
-async function getData(): Promise<User> {
-  return [
-    {
-      id: '2992992',
-      name: 'Fulano da Silva',
-      email: 'fulano@email.com',
-      accessLevel: '5',
-      password: '123456'
-    }
-  ]
-}
-
-export default async function App() {
-  const data = await getData()
-
+function App() {
   return (
     <div className='container mx-auto py-10'>
-      <DataTable columns={columns} data={data}/>
+      <DataTableDemo/>
     </div>
   )
 }
+
+export default App
